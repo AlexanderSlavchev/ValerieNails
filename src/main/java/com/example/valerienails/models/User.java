@@ -28,7 +28,7 @@ public class User {
     private List<Image> images;
 
     @ManyToOne
-    @JoinColumn(name = "role_ид")
+    @JoinColumn(name = "role_id")
     private Role role;
 
 }
