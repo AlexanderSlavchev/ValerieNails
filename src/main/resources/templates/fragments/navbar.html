@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<div class="rd-navbar-wrap" th:fragment="navbar">
+    <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-center" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+        <div class="rd-navbar-aside-outer rd-navbar-collapse">
+            <div class="rd-navbar-aside">
+                <div class="header-info">
+                    <ul class="list-inline list-inline-md">
+                        <li>
+                            <div class="unit unit-spacing-xs align-items-center">
+                                <div class="unit-left fw-bold">Позвънете:</div>
+                                <div class="unit-body"><a href="tel:#">(+359) 886 337640</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="unit unit-spacing-xs align-items-center">
+                                <div class="unit-left fw-bold">Работно време:</div>
+                                <div class="unit-body"> Пн-Нд: 10:00-20:00</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social-block">
+                    <ul class="list-inline">
+                        <li><a class="icon fa-facebook" href="#"></a></li>
+                        <li><a class="icon fa-instagram" href="#"></a></li>
+                        <li><a class="icon fa-telegram" href="#"></a></li>
+                        <li><a class="icon fa-vimeo" href="#"></a></li>
+                        <li><a class="icon fa-youtube" href="#"></a></li>
+                        <li><a class="icon fa-pinterest-p" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand"><a href="home.html"><img th:src="@{images/logo-dark-main-171x44.png}" src="../static/images/logo-dark-main-171x44.png" alt="" width="171" height="44"/></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                        <ul class="rd-navbar-nav">
+                            <li class="rd-nav-item active"><a class="rd-nav-link" href="home.html">Начало</a></li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">За мен</a>
+                                <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li>
+                                </ul>
+                            </li>
+                            <li class="rd-nav-item"> <a class="rd-nav-link" href="services.html">Услуги</a></li>
+                            <li class="rd-nav-brand"><a href="index.html"><img th:src="@{images/logo-dark-main-171x44.png}" src="../static/images/logo-dark-main-171x44.png" alt="" width="171" height="44"/></a></li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">Блог</a>
+                                <!-- RD Navbar Dropdown-->
+                                <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog post</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-classic.html">Blog Classic</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
+                                </ul>
+                            </li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">Галерия</a>
+                                <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
+                                    <li class="rd-megamenu-item">
+                                        <h6 class="rd-megamenu-title">Pages 1</h6>
+                                        <ul class="rd-megamenu-list">
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and accordions</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid system</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-megamenu-item">
+                                        <h6 class="rd-megamenu-title">Pages 2</h6>
+                                        <ul class="rd-megamenu-list">
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="appointment.html">Appointment</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team-member-profile.html">Team Member Profile</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-megamenu-item">
+                                        <h6 class="rd-megamenu-title">Pages 3</h6>
+                                        <ul class="rd-megamenu-list">
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="under-construction.html">Under Construction</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maintenance.html">Maintenance</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="login/register.html">Login/Register</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503.html">503</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-megamenu-item">
+                                        <h6 class="rd-megamenu-title">Gallery</h6>
+                                        <ul class="rd-megamenu-list">
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-gallery.html">Grid Gallery</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="masonry-gallery.html">Masonry Gallery</a></li>
+                                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="gallery-without-padding.html">Gallery without padding</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+</html>
