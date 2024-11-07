@@ -1,6 +1,32 @@
 // Content.js: define the content of the website
 const content = {
 
+    // navbar content
+    navHome: "Начало",
+    navAbout: "За мен",
+    navServices: "Услуги",
+    navGallery: "Галерия",
+    navTestimonials: "Отзиви",
+    navPricing: "Цени",
+    navContact: "Контакт",
+    navBlog: "Блог",
+    navCallMessage: "Позвънете!",
+    navCallNumber: "+359 886 33 76 40",
+    navWorkHoursTitle: "Работно време",
+    navWorkHours: "Пон-Нд: 10:00 – 20:00",
+
+    // breadcrumb content
+    breadcrumbHome: "Начало",
+    breadcrumbAbout: "За мен",
+    breadcrumbServices: "Услуги",
+    breadcrumbGallery: "Галерия",
+    breadcrumbTestimonials: "Отзиви",
+    breadcrumbPricing: "Цени",
+    breadcrumbContact: "Контакт",
+    breadcrumbBlog: "Блог",
+
+
+    // home page content
     slideTitle1: "ValerieNails - Ръце, Които Излъчват Красота и Стил",
     slideText1: "Нашият маникюр е не просто грижа за ноктите – той е изкуство, което подчертава твоята индивидуалност и стил. " +
         "От класически до авангарден дизайн, всеки маникюр при нас е изработен\n" +
@@ -80,7 +106,19 @@ const content = {
     contactInfo3: "valerie.nails@gmail.com",
 
     footerCopy: "© 2024 ValerieNails. Copyright ",
-    footerPrivacy: "Privacy Policy"
+    footerPrivacy: "Privacy Policy",
+
+
+    // about page content
+    aboutTitle: "За мен",
+    aboutName: "Валери́ Гаврилова",
+    aboutClassification: "Сертифициран маникюрист, педикюрист и специалист по дизайн на нокти.",
+    aboutText1: "Здравейте, аз съм Валери́, основател на Valerie Nails.",
+    aboutText2: "С годините съм създала безупречна репутация и предлагам индивидуален подход към всеки клиент.",
+    aboutText3: "При мен ще откриете уютна атмосфера, внимание към детайла и висококачествени продукти.",
+    aboutBook: "Запазете час",
+    aboutCertificates: "Сертификати",
+    aboutMadeBy: "Създадено от Валери́",
 
 };
 

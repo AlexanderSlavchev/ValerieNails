@@ -1,22 +1,22 @@
-<!DOCTYPE html>
 <html lang="en" >
 <div class="rd-navbar-wrap" th:fragment="navbar">
     <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-center" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
+             data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
         <div class="rd-navbar-aside-outer rd-navbar-collapse">
             <div class="rd-navbar-aside">
                 <div class="header-info">
                     <ul class="list-inline list-inline-md">
                         <li>
                             <div class="unit unit-spacing-xs align-items-center">
-                                <div class="unit-left fw-bold">Позвънете:</div>
-                                <div class="unit-body"><a href="tel:#">(+359) 886 337640</a></div>
+                                <div class="unit-left fw-bold" id="navCallMessage"></div>
+                                <div class="unit-body"><a href="tel:#" id="navCallNumber"></a></div>
                             </div>
                         </li>
                         <li>
                             <div class="unit unit-spacing-xs align-items-center">
-                                <div class="unit-left fw-bold">Работно време:</div>
-                                <div class="unit-body"> Пн-Нд: 10:00-20:00</div>
+                                <div class="unit-left fw-bold" id="navWorkHoursTitle"></div>
+                                <div class="unit-body" id="navWorkHours"></div>
                             </div>
                         </li>
                     </ul>
@@ -40,22 +40,26 @@
                     <!-- RD Navbar Toggle-->
                     <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                     <!-- RD Navbar Brand-->
-                    <div class="rd-navbar-brand"><a href="home.html"><img th:src="@{images/logo-dark-main-171x44.png}" src="../static/images/logo-dark-main-171x44.png" alt="" width="171" height="44"/></a></div>
+                    <div class="rd-navbar-brand"><a href="home.html"><img th:src="@{images/logo-dark-main-171x44.png}"
+                                                                          src="../static/images/logo-dark-main-171x44.png"
+                                                                          alt="" width="171" height="44"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                     <div class="rd-navbar-nav-wrap">
                         <ul class="rd-navbar-nav">
-                            <li class="rd-nav-item active"><a class="rd-nav-link" href="home.html">Начало</a></li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">За мен</a>
+                            <li class="rd-nav-item active"><a class="rd-nav-link" th:href="@{/home}" id="navHome"></a></li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" th:href="@{about}" id="navAbout"></a>
                                 <ul class="rd-menu rd-navbar-dropdown">
                                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
                                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
                                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li>
                                 </ul>
                             </li>
-                            <li class="rd-nav-item"> <a class="rd-nav-link" href="services.html">Услуги</a></li>
-                            <li class="rd-nav-brand"><a href="index.html"><img th:src="@{images/logo-dark-main-171x44.png}" src="../static/images/logo-dark-main-171x44.png" alt="" width="171" height="44"/></a></li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">Блог</a>
+                            <li class="rd-nav-item"> <a class="rd-nav-link" href="services.html" id="navServices"></a></li>
+                            <li class="rd-nav-brand"><a href="index.html"><img th:src="@{images/logo-dark-main-171x44.png}"
+                                                                               src="../static/images/logo-dark-main-171x44.png"
+                                                                               alt="" width="171" height="44"/></a></li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="#" id="navBlog"></a>
                                 <!-- RD Navbar Dropdown-->
                                 <ul class="rd-menu rd-navbar-dropdown">
                                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog post</a></li>
@@ -64,7 +68,7 @@
                                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
                                 </ul>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="#">Галерия</a>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="#" id="navGallery"></a>
                                 <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
                                     <li class="rd-megamenu-item">
                                         <h6 class="rd-megamenu-title">Pages 1</h6>
@@ -112,7 +116,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Контакти</a></li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" id="navContact"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -120,4 +124,5 @@
         </div>
     </nav>
 </div>
+<script th:src="@{js/content.js}" src="/js/content.js"></script>
 </html>

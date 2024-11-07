@@ -1,0 +1,130 @@
+<!-- Page Title--><!DOCTYPE html>
+<html class="wide wow-animation" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head class="main-head" th:replace="~{/fragments/head.html :: main-head}">
+    <title>Home</title></head>
+<body>
+<div class="preloader">
+    <div class="preloader-body">
+        <div class="cssload-container">
+            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <!-- Page Header-->
+    <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap" th:replace="~{/fragments/navbar.html :: navbar}">
+
+        </div>
+    </header>
+    <!-- Content-->
+    <section class="section-page-title"
+             style="background-image: url(/images/page-title-1-1920x305.jpg); background-size: cover;">
+        <div class="container">
+            <h1 class="page-title" id="aboutTitle"></h1>
+        </div>
+    </section>
+    <section class="breadcrumbs-custom">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a th:href="@{home}" id="breadcrumbHome"></a></li>
+                <!--                <li><a href="#" id="breadcrumbPages"></a></li>-->
+                <li class="active" th:href="@{about}" id="breadcrumbAbout"></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section section-lg bg-default">
+        <div class="container">
+            <div class="row row-50">
+                <div class="col-lg-5 col-xl-4 text-center">
+                    <div class="row row-50">
+                        <div class="col-12"><img class="img-shadow" src="/images/team-4-370x370.jpg" alt="" width="370"
+                                                 height="370"/>
+                        </div>
+                        <div class="col-12"><a class="button button-primary" th:href="@{booking}" id="aboutBook"></a>
+                        </div>
+                        <div class="col-12">
+                            <ul class="list-inline social-list">
+                                <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-facebook"
+                                       href="#"></a></li>
+                                <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-twitter" href="#"></a>
+                                </li>
+                                <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-instagram"
+                                       href="#"></a></li>
+                                <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-pinterest-p"
+                                       href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-xl-8">
+                    <div class="box-team-info">
+                        <div class="box-team-info-header">
+                            <h3 id="aboutName"></h3>
+                            <p id="aboutClassification"></p>
+                            <div class="divider-lg"></div>
+                        </div>
+                        <p id="aboutText1"></p>
+                        <div class="quote-bordered">
+                            <div class="quote-caption">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="88.34px"
+                                     height="65.34px" viewBox="0 0 88.34 65.34" enable-background="new 0 0 88.34 65.34"
+                                     overflow="scroll" xml:space="preserve" preserveAspectRatio="none">
+                      <path d="M49.394,65.34v-4.131c12.318-7.088,19.924-16.074,22.811-26.965c-3.125,2.032-5.968,3.051-8.526,3.051																							c-4.265,0-7.864-1.721-10.803-5.168c-2.937-3.444-4.407-7.654-4.407-12.64c0-5.511,1.932-10.142,5.791-13.878																							C58.123,1.873,62.873,0,68.51,0c5.639,0,10.354,2.379,14.143,7.137c3.793,4.757,5.688,10.678,5.688,17.758																							c0,9.977-3.814,18.912-11.443,26.818C69.268,59.613,60.101,64.156,49.394,65.34z M0.923,65.34v-4.131																							c12.321-7.088,19.926-16.074,22.813-26.965c-3.126,2.032-5.993,3.051-8.598,3.051c-4.219,0-7.794-1.721-10.734-5.168																							C1.467,28.683,0,24.473,0,19.487C0,13.976,1.919,9.346,5.757,5.609C9.595,1.873,14.334,0,19.971,0																							c5.685,0,10.41,2.379,14.178,7.137c3.767,4.757,5.652,10.678,5.652,17.758c0,9.977-3.805,18.912-11.409,26.818																							C20.787,59.613,11.632,64.156,0.923,65.34z"></path>
+                    </svg>
+                                <h3 class="quote-text" id="aboutText2"></h3>
+                            </div>
+                        </div>
+                        <p id="aboutText3"></p>
+                        <div class="box-team-info-carousel" th:if="${certificates != null and !certificates.isEmpty()}">
+                            <h4 class="heading-title" id="aboutCertificates">Certificates and Diplomas</h4>
+                            <!-- Owl Carousel-->
+                            <div class="owl-carousel text-center" data-items="1" data-sm-items="2" data-md-items="4"
+                                 th:attr="data-lg-items=${certificates.size() == 1 ? 1 : (certificates.size() == 2 ? 2 : 3)}"
+                                 data-dots="true" data-nav="false" data-stage-padding="15"
+                                 data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false"
+                                 data-lightgallery="group">
+
+                                <!-- Thymeleaf цикъл за динамично зареждане на изображенията -->
+                                <a th:each="certificate : ${certificates}" data-lightgallery="item"
+                                   th:href="@{${certificate}}">
+                                    <img th:src="@{${certificate}}" alt="Certificate" width="119" height="170"/>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg bg-gray-100 text-center">
+        <div class="container">
+            <h2>Mary’s Works</h2>
+            <div class="divider-lg"></div>
+            <!-- Owl Carousel-->
+            <div class="owl-carousel carousel-default" data-items="1" data-sm-items="2" data-md-items="3"
+                 data-lg-items="4" data-dots="true" data-nav="true" data-stage-padding="15" data-loop="true"
+                 data-autoplay="true" data-margin="30" data-mouse-drag="false"><img
+                    src="images/team-member-1-270x270.jpg" alt="" width="270" height="270"/><img
+                    src="images/team-member-2-270x270.jpg" alt="" width="270" height="270"/><img
+                    src="images/team-member-3-270x270.jpg" alt="" width="270" height="270"/><img
+                    src="images/team-member-4-270x270.jpg" alt="" width="270" height="270"/><img
+                    src="images/team-member-5-270x270.jpg" alt="" width="270" height="270"/><img
+                    src="images/team-member-6-270x270.jpg" alt="" width="270" height="270"/>
+            </div>
+        </div>
+    </section>
+    <!-- Page Footer-->
+    <section class="copyrights-footer" th:replace="~{/fragments/copyrightsFooter.html :: copyrights-footer}">
+    </section>
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Javascript-->
+<script th:src="@{js/content.js}" src="/js/content.js"></script>
+<script th:src="@{js/core.min.js}" src="../static/js/core.min.js"></script>
+<script th:src="@{js/script.js}" src="../static/js/script.js"></script>
+</body>
+</html>
