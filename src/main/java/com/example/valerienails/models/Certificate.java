@@ -16,6 +16,6 @@ public class Certificate {
     private String imageUrl;
 
     @ManyToOne()
-    @JoinColumn(name = "team_member_id")
-    private TeamMember teamMember;
+    @JoinColumn(name = "team_member_details_id")
+    private TeamMemberDetails teamMemberDetails;
 }

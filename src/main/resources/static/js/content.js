@@ -120,6 +120,13 @@ const content = {
     aboutCertificates: "Сертификати",
     aboutMadeBy: "Създадено от Валери́",
 
+    // services page content
+    servicesTitle: "Услуги",
+    servicesBreadcrumbHome: "Начало",
+    servicesBreadcrumbServices: "Услуги",
+    servicesAllServices: "Всички услуги",
+    servicesSubtitle: "Вижте нашите услуги за маникюр, педикюр и дизайн на нокти.",
+    servicesLink: "Запазете час",
 };
 
 // function to inject content into the HTML

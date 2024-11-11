@@ -36,6 +36,7 @@ public class HomeController {
         return "booking";
     }
 
+    @GetMapping("/services")
     public String services() {
         return "services";
     }

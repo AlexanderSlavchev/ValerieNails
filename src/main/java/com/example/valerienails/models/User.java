@@ -1,5 +1,6 @@
 package com.example.valerienails.models;
 
+import com.example.valerienails.models.enums.RoleType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -27,8 +28,13 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Image> images;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "team_member_details_id")
+    private TeamMemberDetails teamMemberDetails;
+
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;
+
 
 }
